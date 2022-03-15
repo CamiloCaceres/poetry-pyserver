@@ -2,6 +2,7 @@ from  fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.user import user
 from routes.poem import poem
+from routes.poet import poet
 
 
 app = FastAPI()
@@ -17,3 +18,4 @@ app.add_middleware(
 )
 app.include_router(user)
 app.include_router(poem)
+app.include_router(poet)
